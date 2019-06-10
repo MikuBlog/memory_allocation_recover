@@ -280,7 +280,7 @@ Status recovery(int flag)
 {     
     Node *p = first;    
     for(; p != NULL; p = p->next) {      
-        if(p->data.num == flag) {     
+        if(p->data.num == flag) { 
             if(p->prior == first) { 
 				// 当前P指向的下一个不是最后一个时
                 if(p->next != end) {        
@@ -325,7 +325,8 @@ void main()
         printf("\n输入错误，请重新选择输入所使用的内存分配算法 (0~2):");       
         scanf("%d",&a);      
     }
-    switch(a) {    
+    switch(a) {  
+		case 0: exit(0);break;
         case 1:printf("\n\t****使用首次适应算法：****\n");
             break;       
         case 2:printf("\n\t****使用最佳适应算法：****\n");
